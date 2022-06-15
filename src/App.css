@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+}
+.message {
+  position: absolute;
+  top: 25%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 30px;
+  z-index: 999;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  letter-spacing: 0.2rem;
+  font-size: 36px;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cube-row {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cube {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+.letter {
+  text-transform: uppercase;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #d3d6da;
 }
 
-.App-link {
-  color: #61dafb;
+.reset-board {
+  padding: 5px 5px 5px 20px;
+  background: none;
+  color: #41a4bd;
+  font-size: 38px;
+  position: relative;
+  bottom: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.top {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid grey;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+}
+.bottom {
+}
+
+.cube-row.error {
+  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.answer {
+  font-weight: 700;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 60px;
+  margin-bottom: 7px;
+}
+
+.data {
+  width: 300px;
+  height: 65px;
+  border: 2px solid #d3d6da;
+  font-weight: 600;
+  font-size: 18px;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+
+.nextWord {
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
   }
-  to {
-    transform: rotate(360deg);
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
   }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.correct {
+  background: #3db90a;
+  color: #fff;
+}
+
+.present {
+  background: #f3bc06;
+  color: #fff;
+}
+
+.absent {
+  background: #e96f6f;
+  color: #fff;
 }
