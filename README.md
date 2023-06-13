@@ -1,5 +1,9 @@
-# 영단어 게임 프로젝트(WordFit 웹버전)
+# 영단어 게입 앱
 
-- 6번의 기회 안에 5글자의 영단어를 맞추는 게임
-- 데이터 저장소 local storage 사용
-- 실행 : npm start
+\* 소개: 6번의 기회 안에 5글자의 영단어를 맞추는 게임  
+\* 사용기술: javascript, local storage
+
+```
+npm install
+npm start
+```
