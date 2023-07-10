@@ -19,6 +19,7 @@
   letter-spacing: 0.2rem;
   font-size: 36px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .cube-row {
